@@ -8,12 +8,17 @@
 	<img src="{{ url_for('video_feed') }}">
 	<br>
 	<br>
-	<button></button>
+	<button>Feed</button>
+
 	<script>
-		$( "button" ).click(function() {
-			$.get( "feed")
+		$( 'button' ).click(function() {
+			$.get( 'feed')
 			.done(function( data ) {
-				alert( "Result : " + data );
+				if(data == '1'){
+					alert( 'Success!' );
+				}else{
+					alert( 'Fail!' );
+				}
 			});
 		});
 	</script>
