@@ -1,9 +1,21 @@
 <html>
-  <head>
-    <title>Pet Feeder</title>
-  </head>
-  <body>
-    <h1>Pet Feeder</h1>
-    <img src="{{ url_for('video_feed') }}">
-  </body>
+<head>
+	<title>Pet Feeder</title>
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+</head>
+<body>
+	<h1>Pet Feeder</h1>
+	<img src="{{ url_for('video_feed') }}">
+	<br>
+	<br>
+	<button></button>
+	<script>
+		$( "button" ).click(function() {
+			$.get( "feed")
+			.done(function( data ) {
+				alert( "Result : " + data );
+			});
+		});
+	</script>
+</body>
 </html>
